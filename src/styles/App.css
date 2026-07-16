@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+  transition: all 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f4f7fb;
+  transition: all 0.3s ease;
+}
+
+.app.dark {
+  background: #111827;
+  color: #ffffff;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.dashboard-content,
+.sidebar,
+.navbar,
+.card,
+.transaction-form,
+.transaction-card,
+.search-filter,
+.budget-container,
+.bar-chart-card,
+.pie-chart-card {
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #60a5fa;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 15px;
+  }
+}

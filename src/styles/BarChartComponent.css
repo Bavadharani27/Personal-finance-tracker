@@ -1,0 +1,36 @@
+.bar-chart-card {
+  margin-top: 30px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.bar-chart-card h2 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.bar-chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+.dark .bar-chart-card {
+  background: #1f2937;
+}
+
+.dark .bar-chart-card h2 {
+  color: #60a5fa;
+}
+
+
+@media (max-width: 768px) {
+  .bar-chart-card {
+    padding: 20px;
+  }
+
+  .bar-chart-card h2 {
+    font-size: 22px;
+  }
+}
