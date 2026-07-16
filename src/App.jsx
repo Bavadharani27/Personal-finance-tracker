@@ -43,22 +43,22 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const handleAddTransaction = (transaction) => {
     if (editTransaction) {
-      setTransactions(
-        transactions.map((item) =>
-          item.id === transaction.id ? transaction : item
-        )
-      );
+  setTransactions(
+    transactions.map((item) =>
+      item.id === transaction.id ? transaction : item
+    )
+  );
 
-      setEditTransaction(null);
-    } else {
-      setTransactions([
-        ...transactions,
-        {
-          ...transaction,
-          id: Date.now(),
-        },
-      ]);
-    }
+  setEditTransaction(null);
+} else {
+  setTransactions((prev) => [
+  ...prev,
+  {
+    ...transaction,
+    id: Date.now(),
+  },
+]);
+}
   };
   const handleDelete = (id) => {
     setTransactions(
@@ -81,13 +81,13 @@ function App() {
   const savings = totalBalance;
   const filteredTransactions = transactions.filter(
     (transaction) => {
-      const matchesSearch =
-        transaction.description
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase()) ||
-        transaction.category
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase());
+    const matchesSearch =
+  (transaction.description || "")
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase()) ||
+  (transaction.category || "")
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase());
 
       const matchesCategory =
         selectedCategory === "All" ||
