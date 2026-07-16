@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import DashboardCards from "./components/DashboardCard";
 import TransactionForm from "./components/TransactionForm";
 import TransactionList from "./components/TransactionList";
-import SearchFilter from "./components/SearchFilter";
+import SearchFilter from "./components/searchfilter";
 import BudgetTracker from "./components/BudgetTracker";
 import PieChartComponent from "./components/PieChartComponent";
 import BarChartComponent from "./components/BarChartComponent";
