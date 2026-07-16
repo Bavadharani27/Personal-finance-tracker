@@ -6,7 +6,7 @@ function Navbar({ darkMode, toggleTheme }) {
       <h2>Personal Finance Tracker</h2>
 
       <div className="navbar-right">
-        <span>Welcome, Dharu </span>
+        <span>Welcome, User </span>
 
         <button className="theme-btn" onClick={toggleTheme}>
           {darkMode ? "Light" : "Dark"}
